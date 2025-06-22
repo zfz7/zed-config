@@ -8,15 +8,18 @@
     "dark": "JetBrains Dark"
   },
   "icon_theme": "JetBrains New UI Icons (Dark)",
+  "auto_install_extensions": {
+    "html": true,
+    "codebook": true,
+    "jetbrains-new-ui-icons": true,
+    "jetbrains-themes": true,
+    "kotlin": true,
+    "smithy": true,
+    "java": true
+  },
   "languages": {
     "kotlin": {
-      "language_servers": ["kotlin-lsp", "!kotlin-language-server"],
-      "formatter": {
-        "external": {
-          "command": "ktfmt",
-          "arguments": ["--stdin", "--stdin-path={buffer_path}"]
-        }
-      }
+      "language_servers": ["kotlin-lsp", "!kotlin-language-server", "codebook"]
     },
     "go": {
       "formatter": {
