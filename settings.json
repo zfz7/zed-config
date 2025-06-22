@@ -1,0 +1,38 @@
+{
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "base_keymap": "JetBrains",
+  "theme": {
+    "mode": "dark",
+    "light": "JetBrains Light",
+    "dark": "JetBrains Dark"
+  },
+  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "languages": {
+    "kotlin": {
+      "language_servers": ["kotlin-lsp", "!kotlin-language-server"],
+      "formatter": {
+        "external": {
+          "command": "ktfmt",
+          "arguments": ["--stdin", "--stdin-path={buffer_path}"]
+        }
+      }
+    },
+    "go": {
+      "formatter": {
+        "external": {
+          "command": "gofmt",
+          "arguments": ["-w", "-s", "{buffer_path}"]
+        }
+      }
+    },
+    "typescript": {
+      "formatter": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
+    }
+  }
+}
