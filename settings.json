@@ -1,4 +1,12 @@
 {
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-opus-4-5"
+    },
+    "always_allow_tool_actions": true,
+    "model_parameters": []
+  },
   "ui_font_size": 16,
   "buffer_font_size": 16,
   "base_keymap": "JetBrains",
@@ -13,13 +21,13 @@
     "codebook": true,
     "jetbrains-new-ui-icons": true,
     "jetbrains-themes": true,
-    "kotlin": true,
+    "kotlin": false,
     "smithy": true,
     "java": true
   },
   "languages": {
     "kotlin": {
-      "language_servers": ["kotlin-lsp", "!kotlin-language-server", "codebook"]
+      "language_servers": ["!kotlin-lsp", "!kotlin-language-server", "codebook"]
     },
     "go": {
       "formatter": {
