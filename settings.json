@@ -1,19 +1,51 @@
 {
+  "ssh_connections": [
+    {
+      "host": "cdd",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/ddeich/workspace/HPMS"],
+        },
+      ],
+    },
+  ],
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 300,
+    },
+  },
   "agent": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-opus-4-5"
+      "model": "claude-opus-4-5",
     },
     "always_allow_tool_actions": true,
-    "model_parameters": []
+    "model_parameters": [],
   },
+  "file_scan_exclusions": [
+    ".brazil",
+    ".bemol",
+    ".builder-mcp",
+    "build/",
+    "env/",
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+  ],
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 15.0,
   "base_keymap": "JetBrains",
   "theme": {
     "mode": "dark",
     "light": "JetBrains Light",
-    "dark": "JetBrains Dark"
+    "dark": "JetBrains Dark",
   },
   "icon_theme": "JetBrains New UI Icons (Dark)",
   "auto_install_extensions": {
@@ -21,29 +53,42 @@
     "codebook": true,
     "jetbrains-new-ui-icons": true,
     "jetbrains-themes": true,
-    "kotlin": false,
+    "kotlin": true,
+    "go": true,
+    "typescript": true,
     "smithy": true,
-    "java": true
+    "java": true,
+  },
+  "lsp": {
+    "gopls": {
+      "initialization_options": {
+        "buildFlags": ["-tags=integration"],
+      },
+    },
   },
   "languages": {
     "kotlin": {
-      "language_servers": ["!kotlin-lsp", "!kotlin-language-server", "codebook"]
+      "language_servers": [
+        "!kotlin-lsp",
+        "!kotlin-language-server",
+        "codebook",
+      ],
     },
     "go": {
       "formatter": {
         "external": {
           "command": "gofmt",
-          "arguments": ["-w", "-s", "{buffer_path}"]
-        }
-      }
+          "arguments": ["-w", "-s", "{buffer_path}"],
+        },
+      },
     },
     "typescript": {
       "formatter": {
         "external": {
           "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
-      }
-    }
-  }
+          "arguments": ["--stdin-filepath", "{buffer_path}"],
+        },
+      },
+    },
+  },
 }
