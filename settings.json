@@ -51,6 +51,7 @@
   "icon_theme": "JetBrains New UI Icons (Dark)",
   "auto_install_extensions": {
     "html": true,
+    "just": true,
     "codebook": true,
     "jetbrains-new-ui-icons": true,
     "jetbrains-themes": true,
