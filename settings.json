@@ -1,4 +1,24 @@
 {
+  "diff_view_style": "split",
+  "agent_servers": {
+    "kiro-cli": {
+      "favorite_models": [
+        "claude-opus-4.6"
+      ],
+      "type": "custom",
+      "command": "kiro-cli",
+      "args": ["acp"],
+    },
+  },
+  "context_servers": {
+    "kiro-cli": {
+      "enabled": true,
+      "remote": false,
+      "command": "kiro-cli-chat",
+      "args": [],
+      "env": {},
+    },
+  },
   "show_edit_predictions": false,
   "ssh_connections": [
     {
@@ -17,11 +37,13 @@
     },
   },
   "agent": {
+    "tool_permissions": {
+      "default": "allow"
+    },
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-opus-4-5",
     },
-    "always_allow_tool_actions": true,
     "model_parameters": [],
   },
   "file_scan_exclusions": [
