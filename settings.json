@@ -2,9 +2,7 @@
   "diff_view_style": "split",
   "agent_servers": {
     "kiro-cli": {
-      "favorite_models": [
-        "claude-opus-4.6"
-      ],
+      "favorite_models": ["claude-opus-4.6"],
       "type": "custom",
       "command": "kiro-cli",
       "args": ["acp"],
@@ -38,7 +36,7 @@
   },
   "agent": {
     "tool_permissions": {
-      "default": "allow"
+      "default": "allow",
     },
     "default_model": {
       "provider": "zed.dev",
@@ -87,6 +85,7 @@
     "gopls": {
       "initialization_options": {
         "buildFlags": ["-tags=integration"],
+        "directoryFilters": ["-**/build", "-**/.brazil"],
       },
     },
   },
