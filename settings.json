@@ -82,6 +82,17 @@
     "java": true,
   },
   "lsp": {
+    "jdtls": {
+      "settings": {
+        "java": {
+          "jdt": {
+            "ls": {
+              "java.home": "/Library/Java/JavaVirtualMachines/amazon-corretto-25.jdk/Contents/Home",
+            },
+          },
+        },
+      },
+    },
     "gopls": {
       "initialization_options": {
         "buildFlags": ["-tags=integration"],
